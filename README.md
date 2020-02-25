@@ -30,7 +30,7 @@ Please check the online documentation:
 https://docs.vmware.com/en/VMware-Cloud-on-AWS/index.html
 
 ## Where can I find documentation about each pyVMC commands?
-Please read below.
+https://nicovibert.com/2020/02/25/pyvmc-python-vmware-cloud-aws/
 
 ## Release Notes
 v1.0 provides users to:
