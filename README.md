@@ -18,8 +18,8 @@ No! You can simply use it to consume and manage your VMware Cloud on AWS SDDC (S
 ## Is it officially supported by VMware?
 Sorry but no, this is a community-based effort. Use it at your own risk. It has extensively been tested though and we'll endeavour to fix any bugs.
 
-## Which version of VMware Cloud on AWS has it been tested against.
-Version 1.9. I don't guarantee support with previous versions. 
+## Which version of VMware Cloud on AWS has it been tested against?
+Versions 1.9 and 1.10. I don't guarantee support with previous versions. 
 I will, however, endeavour to verify compatibility as we release new versions.
 
 ## What if I find a bug or need a new feature?
