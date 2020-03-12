@@ -300,7 +300,6 @@ def newSDDCNAT(proxy_url, sessiontoken, display_name, action, translated_network
     """ Creates a new NAT rule """
     myHeader = {"Content-Type": "application/json","Accept": "application/json", 'csp-auth-token': sessiontoken}
     myURL = (proxy_url + "/policy/api/v1/infra/tier-1s/cgw/nat/USER/nat-rules/" + display_name)
-    print (myURL)
     if action == "any" or action == "REFLEXIVE":
         json_data = {
         "action": "REFLEXIVE",
@@ -536,7 +535,8 @@ def setSDDCPublicIP(proxy_url, sessiontoken, notes, ip_id):
 def newSDDCPublicIP(proxy_url, sessiontoken, notes):
     """ Gets a new public IP for compute workloads. Requires a description to be added to the public IP."""
     myHeader = {"Content-Type": "application/json","Accept": "application/json", 'csp-auth-token': sessiontoken}
-    myURL = (proxy_url + "/cloud-service/api/v1/infra/public-ips/" + notes)
+    proxy_url_short = proxy_url.rstrip("sks-nsxt-manager")
+    myURL = (proxy_url_short + "cloud-service/api/v1/infra/public-ips/" + notes)
     json_data = {
     "display_name" : notes
     }
@@ -1065,7 +1065,7 @@ elif intent_name == "new-nat-rule":
         if len(sys.argv) >= 8:
             status = sys.argv[7]
         else:
-            status = "false"
+            status = "true"
         print(newSDDCNAT(proxy, session_token, display_name, action, translated_network, source_network, service, translated_port, logging, status))
     elif action == "DNAT": 
         translated_network = sys.argv[4]
@@ -1079,7 +1079,7 @@ elif intent_name == "new-nat-rule":
         if len(sys.argv) >= 10:
             status = sys.argv[9]
         else:
-            status = "false"
+            status = "true"
         print(newSDDCNAT(proxy, session_token, display_name, action, translated_network, source_network, service, translated_port, logging, status))
     else :
         print("There was an error. Make sure you follow the instructions.")
