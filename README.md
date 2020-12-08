@@ -1,3 +1,14 @@
+All changes and updates on PyVMC can be found at the following repo:
+
+https://github.com/vmware/python-client-for-vmware-cloud-on-aws
+
+
+
+
+
+
+
+
 # pyVMC
 Welcome to PyVMC !
 
